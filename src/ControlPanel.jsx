@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Lock, Unlock } from "lucide-react";
+import React, {useState, useEffect} from "react";
+import {Lock, Unlock} from "lucide-react";
 import {useNavigate} from "react-router";
+import {words} from "./words";
 
 const ControlPanel = () => {
-    const [words, setWords] = useState([]);
     const navigate = useNavigate();
     const [terminalWords, setTerminalWords] = useState({});
     const [locked, setLocked] = useState(false);
@@ -13,23 +13,12 @@ const ControlPanel = () => {
         return chars[Math.floor(Math.random() * chars.length)];
     };
 
-    useEffect(() => {
-        fetch("/words.txt")
-            .then((res) => res.text())
-            .then((text) => {
-                // nếu words.txt chứa danh sách từ, ví dụ mỗi từ 1 dòng
-                const wordList = text.split("\n").map((w) => w.trim()).filter(Boolean);
-                setWords(wordList);
-            })
-            .catch((err) => console.error("Lỗi load words.txt:", err));
-    }, []);
-
-    const Terminal = ({ number, word, onClick }) => {
+    const Terminal = ({number, word, onClick}) => {
         const rows = 15;
         const cols = 15;
         const [matrixLines, setMatrixLines] = useState(() =>
-            Array.from({ length: rows }, () =>
-                Array.from({ length: cols }, getRandomChar)
+            Array.from({length: rows}, () =>
+                Array.from({length: cols}, getRandomChar)
             )
         );
 
@@ -70,13 +59,15 @@ const ControlPanel = () => {
                 onClick={handleClick}
             >
                 {/* Screen */}
-                <div className="relative z-10 bg-black rounded p-3 min-h-48 flex items-center justify-center overflow-hidden">
+                <div
+                    className="relative z-10 bg-black rounded p-3 min-h-48 flex items-center justify-center overflow-hidden">
                     {word ? (
                         <span className="text-green-400 font-mono text-xl md:text-2xl tracking-widest">
               {word}
             </span>
                     ) : (
-                        <div className="text-green-400 font-mono text-[8px] md:text-[10px] leading-relaxed tracking-widest whitespace-pre">
+                        <div
+                            className="text-green-400 font-mono text-[8px] md:text-[10px] leading-relaxed tracking-widest whitespace-pre">
                             {matrixLines.map((row, idx) => (
                                 <div key={idx}>{row.join(" ")}</div>
                             ))}
@@ -103,7 +94,8 @@ const ControlPanel = () => {
 
             {/* Chỉ hiện panel khi ngang */}
             <div className="max-w-7xl mx-auto landscape:block portrait:hidden">
-                <div className="bg-gradient-to-b from-slate-600 to-slate-800 rounded-lg p-4 md:p-6 shadow-2xl border border-slate-500">
+                <div
+                    className="bg-gradient-to-b from-slate-600 to-slate-800 rounded-lg p-4 md:p-6 shadow-2xl border border-slate-500">
                     {/* Terminal Grid Responsive */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         {[1, 2, 3, 4].map((num) => (
@@ -119,7 +111,8 @@ const ControlPanel = () => {
                                     }
                                 />
                                 {/* Terminal Number */}
-                                <div className="text-white text-5xl md:text-7xl lg:text-8xl font-bold mt-4 font-mono tracking-wider">
+                                <div
+                                    className="text-white text-5xl md:text-7xl lg:text-8xl font-bold mt-4 font-mono tracking-wider">
                                     {num}
                                 </div>
                             </div>
@@ -134,11 +127,11 @@ const ControlPanel = () => {
                         >
                             {locked ? (
                                 <>
-                                    <Lock className="w-5 h-5" /> LOCK
+                                    <Lock className="w-5 h-5"/> LOCK
                                 </>
                             ) : (
                                 <>
-                                    <Unlock className="w-5 h-5" /> UNLOCK
+                                    <Unlock className="w-5 h-5"/> UNLOCK
                                 </>
                             )}
                         </button>
