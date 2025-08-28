@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/board_game_descypto/static/css/main.a4ae1318.css",
-    "main.js": "/board_game_descypto/static/js/main.3e3d37dd.js",
+    "main.js": "/board_game_descypto/static/js/main.f3310681.js",
     "static/js/453.eaf0dd3a.chunk.js": "/board_game_descypto/static/js/453.eaf0dd3a.chunk.js",
     "index.html": "/board_game_descypto/index.html",
     "main.a4ae1318.css.map": "/board_game_descypto/static/css/main.a4ae1318.css.map",
-    "main.3e3d37dd.js.map": "/board_game_descypto/static/js/main.3e3d37dd.js.map",
+    "main.f3310681.js.map": "/board_game_descypto/static/js/main.f3310681.js.map",
     "453.eaf0dd3a.chunk.js.map": "/board_game_descypto/static/js/453.eaf0dd3a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4ae1318.css",
-    "static/js/main.3e3d37dd.js"
+    "static/js/main.f3310681.js"
   ]
 }
