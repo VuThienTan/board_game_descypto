@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/decrypto-game/static/css/main.ef4bc0fd.css",
-    "main.js": "/decrypto-game/static/js/main.bfa4d689.js",
-    "static/js/453.eaf0dd3a.chunk.js": "/decrypto-game/static/js/453.eaf0dd3a.chunk.js",
-    "index.html": "/decrypto-game/index.html",
-    "main.ef4bc0fd.css.map": "/decrypto-game/static/css/main.ef4bc0fd.css.map",
-    "main.bfa4d689.js.map": "/decrypto-game/static/js/main.bfa4d689.js.map",
-    "453.eaf0dd3a.chunk.js.map": "/decrypto-game/static/js/453.eaf0dd3a.chunk.js.map"
+    "main.css": "/board_game_descypto/static/css/main.ef4bc0fd.css",
+    "main.js": "/board_game_descypto/static/js/main.54aba777.js",
+    "static/js/453.eaf0dd3a.chunk.js": "/board_game_descypto/static/js/453.eaf0dd3a.chunk.js",
+    "index.html": "/board_game_descypto/index.html",
+    "main.ef4bc0fd.css.map": "/board_game_descypto/static/css/main.ef4bc0fd.css.map",
+    "main.54aba777.js.map": "/board_game_descypto/static/js/main.54aba777.js.map",
+    "453.eaf0dd3a.chunk.js.map": "/board_game_descypto/static/js/453.eaf0dd3a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef4bc0fd.css",
-    "static/js/main.bfa4d689.js"
+    "static/js/main.54aba777.js"
   ]
 }
