@@ -14,7 +14,7 @@ const ControlPanel = () => {
     };
 
     const Terminal = ({number, word, onClick}) => {
-        const rows = 15;
+        const rows = 10;
         const cols = 15;
         const [matrixLines, setMatrixLines] = useState(() =>
             Array.from({length: rows}, () =>
@@ -97,7 +97,7 @@ const ControlPanel = () => {
                 <div
                     className="bg-gradient-to-b from-slate-600 to-slate-800 rounded-lg p-4 md:p-6 shadow-2xl border border-slate-500">
                     {/* Terminal Grid Responsive */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div className="grid grid-cols-4 gap-6 mb-8">
                         {[1, 2, 3, 4].map((num) => (
                             <div key={num} className="text-center">
                                 <Terminal
